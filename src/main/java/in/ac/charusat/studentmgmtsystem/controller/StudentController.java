@@ -26,6 +26,11 @@ public class StudentController {
 
     // Mappings - URL endpoints
     // Get the list of all student
+
+    @GetMapping
+    public  String displayWelcomeMassage(){
+        return "<h1> Welcome user </h1>";
+    }
     @GetMapping("/listStudents")
     public List<Student> getAllStudents() {
         return studentRepository.findAll();
